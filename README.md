@@ -63,4 +63,4 @@ SQL Query
 
 ## Author
 
-***REMOVED*** Malawige
+Sithmaka Malawige

@@ -11,7 +11,7 @@ print(df.columns.tolist())
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="***REMOVED***",
+    password=os.getenv("MYSQL_PASSWORD"),
     database="sales_db"
 )
 
@@ -27,7 +27,7 @@ for index, row in df.iterrows():
     values = (
         row["Order ID"],
         row["Item Type"],
-        row["Sales Channel"],   # using this as a stand-in for Category
+        row["Sales Channel"],   
         row["Unit Price"],
         row["Units Sold"],
         row["Total Revenue"]
